@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -13,31 +13,49 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Rich premium gradient background */
-    background: linear-gradient(135deg, #4f46e5 0%, #312e81 100%);
+    /* Day 4 Unique Premium Dark Indigo Gradient Background */
+    background: linear-gradient(135deg, #1e1b4b 0%, #2e2a72 50%, #4f46e5 100%);
     padding: 20px;
 }
 
 /* ==========================================
-   2. FORM CONTAINER
+   2. FORM CONTAINER WITH BOX SHADOW POLISH
    ========================================== */
 .form-container {
-    background: #ffffff;
-    max-width: 450px;
+    background: rgba(255, 255, 255, 0.07); /* Semi-transparent glass container */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    max-width: 440px;
     width: 100%;
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* STEP 3 & 4: Deep premium box shadow for stunning visual depth */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* STEP 4: Improved Visual Hierarchy Heading */
+/* Slightly lifts the whole card layout on load for premium feel */
+.form-container:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* STEP 4: Strong Visual Hierarchy (White bold text) */
 .form-container h2 {
-    color: #111827;
-    margin-bottom: 28px;
+    color: #ffffff;
     text-align: center;
     font-size: 28px;
     font-weight: 700;
+    margin-bottom: 4px;
     letter-spacing: -0.5px;
+}
+
+.form-container .subtitle {
+    color: #a5b4fc;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 28px;
 }
 
 /* ==========================================
@@ -49,15 +67,18 @@ body {
     flex-direction: column;
 }
 
-.form-group label {
-    font-size: 14px;
-    color: #4b5563;
+.form-group label,
+.radio-group-container p {
+    font-size: 13px;
+    color: #cbd5e1; /* Clear readable white/gray labels */
     margin-bottom: 8px;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 /* ==========================================
-   4. STEP 2 & 5: INPUT EFFECTS & SMOOTH TRANSITIONS
+   4. STEP 2 & 5: DYNAMIC INPUT FOCUS EFFECTS
    ========================================== */
 .form-group input[type="text"],
 .form-group input[type="email"],
@@ -65,36 +86,42 @@ body {
 .form-group select {
     width: 100%;
     padding: 13px 16px;
-    border: 1.5px solid #d1d5db;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     font-size: 15px;
-    color: #1f2937;
+    color: #ffffff; /* User typed letters are crystal white */
     outline: none;
-    background-color: #f9fafb;
-    /* Step 5: Smooth Transition for input property tweaks */
-    transition: all 0.25s ease-in-out;
+    background: rgba(255, 255, 255, 0.05);
+    /* STEP 5: Smooth timing transition for all micro-interactions */
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* STEP 2: Highlight input fields on focus (Border + Soft Background glow) */
+/* Fixed bright white placeholders for perfect contrast */
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* STEP 2: Ultimate Neon Indigo Glow when field is clicked/active */
 .form-group input:focus,
 .form-group select:focus {
-    border-color: #4f46e5;
-    background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+    border-color: #818cf8;
+    background: rgba(255, 255, 255, 0.12);
+    /* Soft cyan/indigo neon outer ring */
+    box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.3);
+    transform: scale(1.01); /* Subtle expandable layout effect on click */
+}
+
+/* Dropdown list items styling */
+.form-group select option {
+    background-color: #1e1b4b;
+    color: #ffffff;
 }
 
 /* ==========================================
-   5. RADIO BUTTONS LAYOUT
+   5. RADIO BUTTONS ALIGNMENT
    ========================================== */
 .radio-group-container {
     margin-bottom: 22px;
-}
-
-.radio-group-container p {
-    font-size: 14px;
-    color: #4b5563;
-    margin-bottom: 8px;
-    font-weight: 600;
 }
 
 .radio-options {
@@ -107,18 +134,23 @@ body {
     align-items: center;
     gap: 8px;
     font-size: 15px;
-    color: #374151;
+    color: #e2e8f0;
     cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.radio-label:hover {
+    color: #ffffff; /* Brightens up option on hovering */
 }
 
 .radio-label input[type="radio"] {
-    accent-color: #4f46e5;
+    accent-color: #818cf8;
     width: 18px;
     height: 18px;
 }
 
 /* ==========================================
-   6. STEP 3 & 5: BUTTON EFFECTS & INTERACTION
+   6. STEP 3 & 5: DYNAMIC BUTTON ANIMATION EFFECTS
    ========================================== */
 .btn-submit {
     width: 100%;
@@ -130,21 +162,31 @@ body {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-    /* Step 5: Smooth Transition for active scale and hover shadow */
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    margin-top: 10px;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+    /* Complex cubic-bezier timing makes animations look organic/fluid */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
 
-/* STEP 3 & 5: Button Hover Effects (Color change, shadow, and slight lift up) */
+/* Submit button key interactions */
 .btn-submit:hover {
     background-color: #4338ca;
-    transform: translateY(-2px); /* Slight lift up */
-    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45); /* Enhanced shadow */
+    transform: translateY(-3px); /* Noticeable lift up from baseline */
+    box-shadow: 0 8px 22px rgba(79, 70, 229, 0.6); /* Vibrant dynamic glow shadow */
 }
 
-/* Pressing interaction state */
+/* Clicking sensation animation */
 .btn-submit:active {
-    transform: translateY(1px) scale(0.98); /* Slight click shrink effect */
-    box-shadow: 0 3px 10px rgba(79, 70, 229, 0.2);
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* Micro-interaction inside the button: slides the arrow slightly forward on hover */
+.btn-submit .arrow {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.btn-submit:hover .arrow {
+    transform: translateX(4px);
 }
