@@ -13,30 +13,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Day 4 Premium Color: Midnight Teal to Deep Cosmic Emerald Gradient */
-    background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #0d9488 100%);
+    /* Clean Solid Midnight Black Background */
+    background: #121212;
     padding: 20px;
 }
 
 /* ==========================================
-   2. REFINED CONTAINER
+   2. FROSTED DARK CARD CONTAINER
    ========================================== */
 .form-container {
-    background: rgba(255, 255, 255, 0.06); /* Ultra-modern dark frosted glass */
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: #1e1e1e; /* Deep Charcoal Black Card */
     max-width: 440px;
     width: 100%;
     padding: 40px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+    border-radius: 14px;
+    border: 1px solid #333333; /* Fine contrast border */
+    /* Deep black drop shadow for a premium floating lift */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
     transition: all 0.3s ease;
 }
 
-/* Visual Hierarchy Header */
+/* Card hover animation */
+.form-container:hover {
+    border-color: #444444;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* Typography Visual Hierarchy */
 .form-container h2 {
-    color: #ffffff;
+    color: #ffffff; /* Pure White Heading */
     text-align: center;
     font-size: 28px;
     font-weight: 700;
@@ -45,7 +50,7 @@ body {
 }
 
 .form-container .subtitle {
-    color: #2dd4bf; /* Vibrant teal subtitle */
+    color: #a0a0a0; /* Muted gray subtitle */
     text-align: center;
     font-size: 14px;
     margin-bottom: 28px;
@@ -62,16 +67,16 @@ body {
 
 .form-group label,
 .radio-group-container p {
-    font-size: 13px;
-    color: #ccfbf1; /* Soft mint color for premium readability */
+    font-size: 12px;
+    color: #e0e0e0; /* Crisp light grey labels */
     margin-bottom: 8px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 /* ==========================================
-   4. DYNAMIC PLACEMENT & WHITE TEXT INPUTS
+   4. INPUTS WITH HIGH CONTRAST FOCUS EFFECTS
    ========================================== */
 .form-group input[type="text"],
 .form-group input[type="email"],
@@ -79,32 +84,32 @@ body {
 .form-group select {
     width: 100%;
     padding: 13px 16px;
-    border: 1.5px solid rgba(255, 255, 255, 0.18);
-    border-radius: 10px;
+    border: 1.5px solid #333333;
+    border-radius: 8px;
     font-size: 15px;
-    color: #ffffff; /* Typed letters are pure white */
+    color: #ffffff; /* User typed inputs are crisp white */
     outline: none;
-    background: rgba(255, 255, 255, 0.04);
+    background: #161616;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Bright White Placeholders fixed */
+/* Sharp White/Grey Placeholders */
 .form-group input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: #757575;
 }
 
-/* STEP 2 EFFECTS: Emerald Glow ring + slight scale on click */
+/* STEP 2 FOCUS EFFECT: Brilliant White border glow and scale lift */
 .form-group input:focus,
 .form-group select:focus {
-    border-color: #2dd4bf;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.25);
+    border-color: #ffffff; /* White active border */
+    background: #1a1a1a;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.15); /* Soft white outer aura */
     transform: scale(1.01);
 }
 
-/* Dropdown selections appearance patch */
+/* Select option patch for dark system dropdown lists */
 .form-group select option {
-    background-color: #042f2e;
+    background-color: #1e1e1e;
     color: #ffffff;
 }
 
@@ -125,7 +130,7 @@ body {
     align-items: center;
     gap: 8px;
     font-size: 15px;
-    color: #e2e8f0;
+    color: #cccccc;
     cursor: pointer;
     transition: color 0.2s ease;
 }
@@ -135,41 +140,43 @@ body {
 }
 
 .radio-label input[type="radio"] {
-    accent-color: #2dd4bf;
+    accent-color: #ffffff; /* Radio select turns pure white */
     width: 18px;
     height: 18px;
 }
 
 /* ==========================================
-   6. PREMIUM GLOW BUTTON EFFECTS
+   6. HIGH CONTRAST MONOCHROME BUTTON
    ========================================== */
 .btn-submit {
     width: 100%;
-    background-color: #0d9488; /* Emerald Teal Primary Color */
-    color: #ffffff;
+    background-color: #ffffff; /* Solid White Button */
+    color: #121212; /* Black Text inside button */
     padding: 14px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(13, 148, 136, 0.4);
+    box-shadow: 0 4px 14px rgba(255, 255, 255, 0.1);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     margin-top: 10px;
 }
 
-/* STEP 3 EFFECTS: Vibrant glow enhance and translate hover action */
+/* STEP 3 EFFECTS: Invert style on hover (turns black with white border) */
 .btn-submit:hover {
-    background-color: #0f766e;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(45, 212, 191, 0.55);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
 }
 
 .btn-submit:active {
     transform: translateY(-1px) scale(0.98);
 }
 
-/* Micro-interaction arrow motion */
+/* Micro-interaction arrow slide */
 .btn-submit .arrow {
     display: inline-block;
     transition: transform 0.25s ease;
