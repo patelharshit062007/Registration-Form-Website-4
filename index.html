@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form Website</title>
-    <!-- Linking external CSS -->
+    <title>Registration Form - Day 4 Polish</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="form-container">
-        <!-- STEP 4: Improved Visual Hierarchy (Bold, prominent heading) -->
+        <!-- STEP 4: Strong Visual Hierarchy Header -->
         <h2>Registration Form</h2>
+        <p class="subtitle">Experience smooth micro-interactions</p>
         
-        <form onsubmit="event.preventDefault(); alert('Registration Successful!');">
+        <form onsubmit="event.preventDefault(); alert('Day 4 Interactions Passed perfectly!');">
             
             <!-- Full Name Field -->
             <div class="form-group">
@@ -33,7 +33,7 @@
                 <input type="password" id="password" placeholder="Min. 6 characters required" minlength="6" required>
             </div>
 
-            <!-- Gender Radio Options -->
+            <!-- Gender Section -->
             <div class="radio-group-container">
                 <p>Gender</p>
                 <div class="radio-options">
@@ -60,8 +60,8 @@
                 </select>
             </div>
 
-            <!-- STEP 3 & 5: Polished Button with arrow representation -->
-            <button type="submit" class="btn-submit">Register Now ➔</button>
+            <!-- STEP 3: Enhanced Button with modern arrow character -->
+            <button type="submit" class="btn-submit">Register Now <span class="arrow">➔</span></button>
 
         </form>
     </div>
