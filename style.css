@@ -13,35 +13,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Day 4 Unique Premium Dark Indigo Gradient Background */
-    background: linear-gradient(135deg, #1e1b4b 0%, #2e2a72 50%, #4f46e5 100%);
+    /* Day 4 Premium Color: Midnight Teal to Deep Cosmic Emerald Gradient */
+    background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #0d9488 100%);
     padding: 20px;
 }
 
 /* ==========================================
-   2. FORM CONTAINER WITH BOX SHADOW POLISH
+   2. REFINED CONTAINER
    ========================================== */
 .form-container {
-    background: rgba(255, 255, 255, 0.07); /* Semi-transparent glass container */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.06); /* Ultra-modern dark frosted glass */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     max-width: 440px;
     width: 100%;
     padding: 40px;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    /* STEP 3 & 4: Deep premium box shadow for stunning visual depth */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+    transition: all 0.3s ease;
 }
 
-/* Slightly lifts the whole card layout on load for premium feel */
-.form-container:hover {
-    border-color: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-}
-
-/* STEP 4: Strong Visual Hierarchy (White bold text) */
+/* Visual Hierarchy Header */
 .form-container h2 {
     color: #ffffff;
     text-align: center;
@@ -52,14 +45,14 @@ body {
 }
 
 .form-container .subtitle {
-    color: #a5b4fc;
+    color: #2dd4bf; /* Vibrant teal subtitle */
     text-align: center;
     font-size: 14px;
     margin-bottom: 28px;
 }
 
 /* ==========================================
-   3. STEP 6: CLEAN ALIGNMENT & SPACING
+   3. LABELS & FIELD SPACING
    ========================================== */
 .form-group {
     margin-bottom: 22px;
@@ -70,7 +63,7 @@ body {
 .form-group label,
 .radio-group-container p {
     font-size: 13px;
-    color: #cbd5e1; /* Clear readable white/gray labels */
+    color: #ccfbf1; /* Soft mint color for premium readability */
     margin-bottom: 8px;
     font-weight: 600;
     text-transform: uppercase;
@@ -78,7 +71,7 @@ body {
 }
 
 /* ==========================================
-   4. STEP 2 & 5: DYNAMIC INPUT FOCUS EFFECTS
+   4. DYNAMIC PLACEMENT & WHITE TEXT INPUTS
    ========================================== */
 .form-group input[type="text"],
 .form-group input[type="email"],
@@ -86,39 +79,37 @@ body {
 .form-group select {
     width: 100%;
     padding: 13px 16px;
-    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
     border-radius: 10px;
     font-size: 15px;
-    color: #ffffff; /* User typed letters are crystal white */
+    color: #ffffff; /* Typed letters are pure white */
     outline: none;
-    background: rgba(255, 255, 255, 0.05);
-    /* STEP 5: Smooth timing transition for all micro-interactions */
+    background: rgba(255, 255, 255, 0.04);
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Fixed bright white placeholders for perfect contrast */
+/* Bright White Placeholders fixed */
 .form-group input::placeholder {
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* STEP 2: Ultimate Neon Indigo Glow when field is clicked/active */
+/* STEP 2 EFFECTS: Emerald Glow ring + slight scale on click */
 .form-group input:focus,
 .form-group select:focus {
-    border-color: #818cf8;
-    background: rgba(255, 255, 255, 0.12);
-    /* Soft cyan/indigo neon outer ring */
-    box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.3);
-    transform: scale(1.01); /* Subtle expandable layout effect on click */
+    border-color: #2dd4bf;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.25);
+    transform: scale(1.01);
 }
 
-/* Dropdown list items styling */
+/* Dropdown selections appearance patch */
 .form-group select option {
-    background-color: #1e1b4b;
+    background-color: #042f2e;
     color: #ffffff;
 }
 
 /* ==========================================
-   5. RADIO BUTTONS ALIGNMENT
+   5. RADIO BUTTONS
    ========================================== */
 .radio-group-container {
     margin-bottom: 22px;
@@ -140,21 +131,21 @@ body {
 }
 
 .radio-label:hover {
-    color: #ffffff; /* Brightens up option on hovering */
+    color: #ffffff;
 }
 
 .radio-label input[type="radio"] {
-    accent-color: #818cf8;
+    accent-color: #2dd4bf;
     width: 18px;
     height: 18px;
 }
 
 /* ==========================================
-   6. STEP 3 & 5: DYNAMIC BUTTON ANIMATION EFFECTS
+   6. PREMIUM GLOW BUTTON EFFECTS
    ========================================== */
 .btn-submit {
     width: 100%;
-    background-color: #4f46e5;
+    background-color: #0d9488; /* Emerald Teal Primary Color */
     color: #ffffff;
     padding: 14px;
     border: none;
@@ -162,26 +153,23 @@ body {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
-    /* Complex cubic-bezier timing makes animations look organic/fluid */
+    box-shadow: 0 4px 14px rgba(13, 148, 136, 0.4);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
+    margin-top: 10px;
 }
 
-/* Submit button key interactions */
+/* STEP 3 EFFECTS: Vibrant glow enhance and translate hover action */
 .btn-submit:hover {
-    background-color: #4338ca;
-    transform: translateY(-3px); /* Noticeable lift up from baseline */
-    box-shadow: 0 8px 22px rgba(79, 70, 229, 0.6); /* Vibrant dynamic glow shadow */
+    background-color: #0f766e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(45, 212, 191, 0.55);
 }
 
-/* Clicking sensation animation */
 .btn-submit:active {
     transform: translateY(-1px) scale(0.98);
 }
 
-/* Micro-interaction inside the button: slides the arrow slightly forward on hover */
+/* Micro-interaction arrow motion */
 .btn-submit .arrow {
     display: inline-block;
     transition: transform 0.25s ease;
