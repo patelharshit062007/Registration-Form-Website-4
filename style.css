@@ -1,0 +1,150 @@
+/* ==========================================
+   1. RESET & BASE STYLES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Rich premium gradient background */
+    background: linear-gradient(135deg, #4f46e5 0%, #312e81 100%);
+    padding: 20px;
+}
+
+/* ==========================================
+   2. FORM CONTAINER
+   ========================================== */
+.form-container {
+    background: #ffffff;
+    max-width: 450px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* STEP 4: Improved Visual Hierarchy Heading */
+.form-container h2 {
+    color: #111827;
+    margin-bottom: 28px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* ==========================================
+   3. STEP 6: CLEAN ALIGNMENT & SPACING
+   ========================================== */
+.form-group {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   4. STEP 2 & 5: INPUT EFFECTS & SMOOTH TRANSITIONS
+   ========================================== */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #1f2937;
+    outline: none;
+    background-color: #f9fafb;
+    /* Step 5: Smooth Transition for input property tweaks */
+    transition: all 0.25s ease-in-out;
+}
+
+/* STEP 2: Highlight input fields on focus (Border + Soft Background glow) */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4f46e5;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+}
+
+/* ==========================================
+   5. RADIO BUTTONS LAYOUT
+   ========================================== */
+.radio-group-container {
+    margin-bottom: 22px;
+}
+
+.radio-group-container p {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.radio-options {
+    display: flex;
+    gap: 24px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #374151;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    accent-color: #4f46e5;
+    width: 18px;
+    height: 18px;
+}
+
+/* ==========================================
+   6. STEP 3 & 5: BUTTON EFFECTS & INTERACTION
+   ========================================== */
+.btn-submit {
+    width: 100%;
+    background-color: #4f46e5;
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    /* Step 5: Smooth Transition for active scale and hover shadow */
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 10px;
+}
+
+/* STEP 3 & 5: Button Hover Effects (Color change, shadow, and slight lift up) */
+.btn-submit:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px); /* Slight lift up */
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45); /* Enhanced shadow */
+}
+
+/* Pressing interaction state */
+.btn-submit:active {
+    transform: translateY(1px) scale(0.98); /* Slight click shrink effect */
+    box-shadow: 0 3px 10px rgba(79, 70, 229, 0.2);
+}
